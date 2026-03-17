@@ -28,8 +28,6 @@ const movies = [
   { title: "Frozen", genre: "Animation", year: 2013, img:"https://image.tmdb.org/t/p/w500/kgwjIb2JDHRhNk13lmSxiClFjVk.jpg", trailer: "https://www.youtube.com/embed/TbQm5doF_Uc" },
   {title:"Harry Potter",genre:"Fantasy",year:2001,img:"https://m.media-amazon.com/images/I/81iqZ2HHD-L._AC_SL1500_.jpg", trailer:"https://www.youtube.com/embed/VyHV0BRtdxo"},
   {title:"Lord of the Rings",genre:"Fantasy",year:2001,img:"https://m.media-amazon.com/images/I/91dSMhdIzTL._SL1500_.jpg", trailer:"https://www.youtube.com/embed/V75dMMIW2B4"},
-
-{title:"Shutter Island",genre:"Thriller",year:2010,  img:"https://m.media-amazon.com/images/I/81D%2BKJkO6SL._AC_SL1500_.jpg",trailer:"https://www.youtube.com/embed/5iaYLCiq5RM"},
 {title:"Se7en",genre:"Thriller",year:1995,img:"https://m.media-amazon.com/images/I/71c05lTE03L._AC_SL1024_.jpg", trailer:"https://www.youtube.com/embed/znmZoVkCjpI"}, 
 ];
 const container = document.getElementById("movieContainer");

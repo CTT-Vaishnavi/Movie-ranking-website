@@ -17,7 +17,7 @@
         <div class="logo">🎬 MovieRate</div>
 
         <ul class="nav-links">
-            <li><a href="#">Movies</a></li>
+            <li><a href="#filter-buttons">Movies</a></li>
         </ul>
 
         <div class="search-box">
@@ -29,12 +29,12 @@
         <div class="hero-content">
             <h1>Discover Amazing Movies</h1>
             <p>Explore trending movies and rate your favorites</p>
-            <button class="hero-btn" onclick="filter-buttons">Explore Now</button>
+            <button class="hero-btn" onclick="filterMovies('all')">Explore Now</button>
         </div>
     </section>
 
     <!-- 🔥 FILTER BUTTONS -->
-    <div class="filter-buttons">
+    <div class="filter-buttons" id="filter-buttons">
         <button onclick="filterMovies('all')" class="active">All</button>
         <button onclick="filterMovies('Action')">Action</button>
         <button onclick="filterMovies('Drama')">Drama</button>
