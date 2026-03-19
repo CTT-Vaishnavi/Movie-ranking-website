@@ -34,3 +34,19 @@ This project focuses on frontend development, API integration, and dynamic UI ha
 ---
 
 ## 📂 Project Structure
+Movie-ranking-website/ │── index.html │── style.css │── script.js │── assets/ │── README.md
+## 🔮 Future Improvements
+- Add user authentication  
+- Add watchlist feature  
+- Improve UI with frameworks like React  
+- Backend integration for real-time data storage  
+
+---
+
+## 👨‍💻 Author
+**Vaishnavi Shinde**  
+
+---
+
+## ⭐ Support
+If you like this project, give it a ⭐ on GitHub!
