@@ -1,17 +1,70 @@
+
+:root {
+    --bg-primary: #121212;
+    --bg-secondary: #1f1f1f;
+    --card-bg: #1e1e1e;
+    --text-primary: white;
+    --text-secondary: #ccc;
+    --accent: red;
+    --filter-bg: #f0f0f0;
+    --filter-text: #333;
+    --hero-overlay: rgba(0, 0, 0, 0.7);
+}
+
+.light-theme {
+    --bg-primary: #f5f5f5;
+    --bg-secondary: #ffffff;
+    --card-bg: #ffffff;
+    --text-primary: #333;
+    --text-secondary: #666;
+    --accent: #e74c3c;
+    --filter-bg: #e0e0e0;
+    --filter-text: #000;
+    --hero-overlay: rgba(255, 255, 255, 0.1);
+}
+
 body {
     margin: 0;
-    font-family: Arial;
-    background: #121212;
-    color: white;
+    font-family: Arial, sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    transition: background 0.3s, color 0.3s;
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
     align-items: center;
     padding: 15px 30px;
-    background: #1f1f1f;
+    background: var(--bg-secondary);
+    transition: background 0.3s;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#authSection {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-welcome {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.logout-btn {
+    background: var(--accent);
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.logout-btn:hover {
+    opacity: 0.8;
 }
 
 .logo {
@@ -30,27 +83,40 @@ body {
 
 .nav-links a {
     text-decoration: none;
-    color: white;
+    color: var(--text-primary);
 }
 
 .search-box input {
     padding: 8px;
     border-radius: 5px;
-    border: none;
+    border: 1px solid var(--text-secondary);
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+}
+
+.theme-toggle {
+    background: none;
+    border: 1px solid var(--text-secondary);
+    color: var(--text-primary);
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.theme-toggle:hover {
+    background: var(--card-bg);
 }
 
 .hero {
     height: 80vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    background: linear-gradient(var(--hero-overlay), var(--hero-overlay)),
         url("https://images.unsplash.com/photo-1478720568477-152d9b164e26?auto=format&fit=crop&w=1600&q=80");
-
     background-size: cover;
     background-position: center;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     text-align: center;
     color: white;
 }
@@ -69,7 +135,7 @@ body {
     padding: 12px 25px;
     font-size: 16px;
     border: none;
-    background: red;
+    background: var(--accent);
     color: white;
     border-radius: 5px;
     cursor: pointer;
@@ -81,6 +147,35 @@ body {
     transform: scale(1.05);
 }
 
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+.filter-buttons button {
+    padding: 8px 16px;
+    border: none;
+    background: var(--filter-bg);
+    color: var(--filter-text);
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+.filter-buttons button:hover {
+    background: var(--text-primary);
+    color: var(--bg-primary);
+}
+
+.filter-buttons button.active {
+    background: var(--accent);
+    color: white;
+}
+
 .movie-container {
     display: flex;
     flex-wrap: wrap;
@@ -89,13 +184,27 @@ body {
     padding: 2em;
 }
 
+.favorites-section {
+    padding: 2em;
+    background: var(--bg-secondary);
+    margin: 0 2em;
+    border-radius: 10px;
+}
+
+.favorites-section h2 {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
 .movie-card {
-    background: #1e1e1e;
+    background: var(--card-bg);
     width: 220px;
     padding: 15px;
     border-radius: 10px;
     text-align: center;
     transition: 0.3s;
+    border: 1px solid var(--text-secondary);
+    position: relative;
 }
 
 .movie-card:hover {
@@ -115,7 +224,7 @@ body {
 }
 
 .rating i {
-    color: gray;
+    color: var(--text-secondary);
     font-size: 20px;
     cursor: pointer;
 }
@@ -127,7 +236,20 @@ body {
 .avg {
     margin-top: 8px;
 }
-/* 🎬 modal */
+
+.wishlist {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 10;
+}
+
+.wishlist.liked i {
+    color: var(--accent) !important;
+}
+
 .modal {
     display: none;
     position: fixed;
@@ -138,14 +260,51 @@ body {
     background: rgba(0, 0, 0, 0.8);
     justify-content: center;
     align-items: center;
+    z-index: 1000;
+}
+
+.login-modal {
+    z-index: 1001;
 }
 
 .modal-content {
-    background: #000;
-    padding: 10px;
+    background: var(--bg-primary);
+    padding: 20px;
     width: 80%;
-    max-width: 700px;
+    max-width: 400px;
     position: relative;
+    border-radius: 10px;
+}
+
+.login-content {
+    text-align: center;
+}
+
+.login-content input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid var(--text-secondary);
+    border-radius: 5px;
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    box-sizing: border-box;
+}
+
+.login-content button {
+    width: 100%;
+    padding: 12px;
+    background: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.login-content button:hover {
+    opacity: 0.9;
 }
 
 .close {
@@ -153,50 +312,67 @@ body {
     top: 10px;
     right: 15px;
     font-size: 25px;
-    color: #fff;
+    color: var(--text-primary);
     cursor: pointer;
 }
-/* ❤️ wishlist */
-.wishlist {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-    font-size: 20px;
-}
 
-.wishlist.liked i {
-    color: red;
-}
-/* Container for buttons */
-.filter-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin: 20px 0;
-    flex-wrap: wrap;
-}
-
-/* Button style */
-.filter-buttons button {
-    padding: 8px 16px;
+.trailer-btn {
+    background: var(--accent);
+    color: white;
     border: none;
-    background: #f0f0f0;
-    color: #333;
-    border-radius: 20px;
+    padding: 8px 16px;
+    border-radius: 5px;
     cursor: pointer;
-    font-size: 14px;
-    transition: 0.3s ease;
+    margin-top: 10px;
 }
 
-/* Hover effect */
-.filter-buttons button:hover {
-    background: #333;
-    color: #fff;
+/* Footer */
+.footer {
+    background: var(--bg-secondary);
+    padding: 2em;
+    text-align: center;
+    margin-top: 3em;
 }
 
-/* Active button */
-.filter-buttons button.active {
-    background: #ff3d00;
-    color: #fff;
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
 }
+
+.footer-links {
+    margin: 1em 0;
+}
+
+.footer-links a {
+    color: var(--text-primary);
+    text-decoration: none;
+    margin: 0 1em;
+}
+
+.social-icons {
+    font-size: 24px;
+    margin-top: 1em;
+}
+
+.social-icons i {
+    margin: 0 10px;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.social-icons i:hover {
+    color: var(--accent);
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    #authSection {
+        order: -1;
+    }
+}
+

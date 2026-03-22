@@ -1,27 +1,42 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MovieRate</title>
-
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
 </head>
-
 <body>
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal login-modal" style="display: flex;">
+        <div class="modal-content login-content">
+            <h2>Login to Continue</h2>
+            <p>Login required for favorites and theme features</p>
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button onclick="login()">Login</button>
+            <p style="margin-top: 10px; font-size: 12px;">Demo: user / pass</p>
+        </div>
+    </div>
 
     <nav class="navbar">
         <div class="logo">🎬 MovieRate</div>
-
         <ul class="nav-links">
             <li><a href="#filter-buttons">Movies</a></li>
         </ul>
-
         <div class="search-box">
             <input type="text" id="searchInput" placeholder="Search Movies">
+        </div>
+        <div id="authSection" style="display: none;">
+            <span id="userWelcome" class="user-welcome"></span>
+            <button id="themeToggle" class="theme-toggle">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button id="logoutBtn" class="logout-btn" onclick="logout()">
+                <i class="fas fa-sign-out-alt"></i>
+            </button>
         </div>
     </nav>
 
@@ -33,7 +48,7 @@
         </div>
     </section>
 
-    <!-- 🔥 FILTER BUTTONS -->
+    <!-- Filter Buttons -->
     <div class="filter-buttons" id="filter-buttons">
         <button onclick="filterMovies('all')" class="active">All</button>
         <button onclick="filterMovies('Action')">Action</button>
@@ -46,9 +61,16 @@
         <button onclick="filterMovies('Thriller')">Thriller</button>
     </div>
 
-    <!-- MOVIES -->
+    <!-- Favorites Section -->
+    <section id="favoritesSection" class="favorites-section" style="display: none;">
+        <h2>Your Favorites <span id="favoritesCount">(0)</span></h2>
+        <div id="favoritesContainer" class="movie-container"></div>
+    </section>
+
+    <!-- Movies Container -->
     <section class="movie-container" id="movieContainer"></section>
 
+    <!-- Trailer Modal -->
     <div id="trailerModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeTrailer()">&times;</span>
@@ -56,8 +78,23 @@
         </div>
     </div>
 
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 MovieRate. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </div>
+            <div class="social-icons">
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+            </div>
+        </div>
+    </footer>
     <script src="script.js"></script>
-
 </body>
-
 </html>
+
