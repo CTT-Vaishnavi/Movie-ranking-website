@@ -28,6 +28,7 @@ const movies = [
   {title:"Toy Story",genre:"Animation",year:1995,img:"https://image.tmdb.org/t/p/w500/uXDfjJbdP4ijW5hWSBrPrlKpxab.jpg",trailer:"https://www.youtube.com/embed/KYz2wyBy3kc"},
   {title:"Finding Nemo",genre:"Animation",year:2003,img:"https://image.tmdb.org/t/p/w500/eHuGQ10FUzK1mdOY69wF5pGgEf5.jpg",trailer:"https://www.youtube.com/embed/wZdpNglLbt8"},
   {title:"Coco",genre:"Animation",year:2017,img:"https://image.tmdb.org/t/p/w500/gGEsBPAijhVUFoiNpgZXqRVWJt2.jpg",trailer:"https://www.youtube.com/embed/xlnPHQ3TLX8"},
+  {title:"Minions",genre:"Animation",year:2015,img:"https://image.tmdb.org/t/p/w500/q0R4crx2SehcEEQEkYObktdeFy.jpg",trailer:"https://www.youtube.com/embed/eisKxhjBnZ0"},
   
   // 🟤 HISTORICAL
   {title:"Lagaan",genre:"Historical",year:2001,img:"https://upload.wikimedia.org/wikipedia/en/b/b6/Lagaan.jpg",trailer:"https://www.youtube.com/embed/oSIGQ0YkFxs"},
@@ -41,8 +42,7 @@ const movies = [
   {title:"Tanhaji",genre:"Historical",year:2020,img:"./tanaji.jpg", trailer:"https://www.youtube.com/embed/9tB4Rzpbf30"},
   {title:"Hera Pheri",genre:"Comedy",year:2000,img:"https://upload.wikimedia.org/wikipedia/en/9/9a/Hera_Pheri_%282000_film%29_poster.jpg",trailer:"https://www.youtube.com/embed/m1zMmVwWr-M"},
   {title:"Dhamaal",genre:"Comedy",year:2007,img:"https://upload.wikimedia.org/wikipedia/en/6/6c/Dhamaal_2007.jpg",trailer:"https://www.youtube.com/embed/-8d0u6lX1zE"},
-  { title: "Golmaal", genre: "Comedy", year: 2006, img: "https://upload.wikimedia.org/wikipedia/en/4/4d/Golmaal_Fun_Unlimited.jpg", trailer: "https://www.youtube.com/embed/1uZ6x7W5q0Q" },
-  {title:"Minions",genre:"Animation",year:2015,img:"https://image.tmdb.org/t/p/w500/q0R4crx2SehcEEQEkYObktdeFy.jpg",trailer:"https://www.youtube.com/embed/eisKxhjBnZ0"},
+  {title:"Golmaal",genre:"Comedy",year:2006,img:"https://upload.wikimedia.org/wikipedia/en/4/4d/Golmaal_Fun_Unlimited.jpg",trailer:"https://www.youtube.com/embed/1uZ6x7W5q0Q"},
   {title:"Pavankhind",genre:"Historical",year:2022,img: "https://upload.wikimedia.org/wikipedia/en/2/28/Pavan_Khind.jpg", trailer:"https://www.youtube.com/embed/2q8V-v5VPPE"},
   {title:"Jodhaa Akbar",genre:"Historical",year:2008,img:"https://upload.wikimedia.org/wikipedia/en/9/9d/Jodhaa_Akbar.jpg",trailer:"https://www.youtube.com/embed/-H2nJ4zJxQ8"},
   {title:"Kesari",genre:"Historical",year:2019,img:"https://upload.wikimedia.org/wikipedia/en/4/41/Kesari_poster.jpg",trailer:"https://www.youtube.com/embed/Ji2iKz5U7oE"},
