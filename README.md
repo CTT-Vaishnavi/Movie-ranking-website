@@ -35,17 +35,22 @@ This project demonstrates strong frontend development skills, API integration, a
 ---
 ## 📸 Screenshots  
 
-### 🏠 Home Page  
-![Home](home.png)
-
 ### 🔍 Login Functionality  
 ![Search](Login.png)
 
+### 🏠 Home Page  
+![Home](home.png)
+
+
 ### ⭐ Rating System  
-![Rating](favourite.png)
+![Rating](Rating.png)
+
+### ⭐ Favourite System  
+![Favourite](favourite.png)
 
 ### 🎬 Trailer Popup  
 ![Trailer](picture.png)
+
 ## 🛠️ Tech Stack
 
 * **HTML5** – Structure
@@ -54,6 +59,12 @@ This project demonstrates strong frontend development skills, API integration, a
 * **TMDB API** – Movie data & trailers
 * **LocalStorage** – Store user ratings
 
+
+![HTML5](https://img.shields.io/badge/HTML5-Structure-orange?logo=html5)
+![CSS3](https://img.shields.io/badge/CSS3-Styling-blue?logo=css3)
+![JavaScript](https://img.shields.io/badge/JavaScript-Logic-yellow?logo=javascript)
+![TMDB API](https://img.shields.io/badge/TMDB-API-green)
+![LocalStorage](https://img.shields.io/badge/LocalStorage-Data-red)
 ---
 
 ## 📁 Project Structure
