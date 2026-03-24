@@ -23,7 +23,19 @@ This project focuses on frontend development, API integration, and dynamic UI ha
 - 🎨 Clean UI with animations and hover effects  
 
 ---
+## 📸 Screenshots  
 
+### 🏠 Home Page  
+![Home](home.png)
+
+### 🔍 Login Functionality  
+![Search](Login.png)
+
+### ⭐ Rating System  
+![Rating](favourite.png)
+
+### 🎬 Trailer Popup  
+![Trailer](picture.png)
 ## 🛠️ Tech Stack
 - **HTML5** – Structure of the website  
 - **CSS3** – Styling and responsive design  

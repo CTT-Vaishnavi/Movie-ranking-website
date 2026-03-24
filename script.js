@@ -37,7 +37,7 @@ const movies = [
   {title: "Fatteshikast",genre: "Historical",year: 2019,img: "https://tse2.mm.bing.net/th/id/OIP.y-xlBAGip6LnwSabWEx45gHaLH?pid=Api&P=0&h=180",trailer: "https://www.youtube.com/embed/Xf1hK2Y9l4E"},
   {title: "Subhedar",genre: "Historical",year: 2023,img: "https://tse3.mm.bing.net/th/id/OIP.DnLRPimOlOqaKT1TDbGhLwAAAA?pid=Api&P=0&h=180",trailer: "https://www.youtube.com/embed/Zc7s0zK9g9Q"},
   {title: "Sarsenapati Hambirrao",genre: "Historical",year: 2022,img: "https://tse4.mm.bing.net/th/id/OIP.GVybkySpyTaKLiQEB-iQ4gHaKl?pid=Api&P=0&h=180",trailer: "https://www.youtube.com/embed/mP5z8nYkXzY" },
-  {title: "Mi Shivajiraje Bhosale Boltoy",genre: "Drama",year: 2009,img: "https://image.tmdb.org/t/p/w500/3k2j1h6g5f4d3s2a1z0x9c8v7b6.jpg",trailer: "https://www.youtube.com/embed/0p9s8d7f6g5"
+  {title: "Mi Shivajiraje Bhosale Boltoy",genre: "Drama",year: 2009,img: "https://tse3.mm.bing.net/th/id/OIP.9SWLRdflkkG8xvBs85Ra3gHaKs?pid=Api&P=0&h=180",trailer: "https://www.youtube.com/embed/0p9s8d7f6g5"
   },
   
   // 🟠 FANTASY
@@ -266,3 +266,21 @@ function closeTrailer() {
 renderMovies(container);
 
 
+const btn = document.getElementById("scrollToggle");
+
+btn.onclick = () => {
+    if (window.scrollY < document.body.scrollHeight / 2) {
+        window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+    } else {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+};
+
+// Change icon on scroll
+window.onscroll = () => {
+    if (window.scrollY > 200) {
+        btn.innerHTML = "⬆";
+    } else {
+        btn.innerHTML = "⬇";
+    }
+};

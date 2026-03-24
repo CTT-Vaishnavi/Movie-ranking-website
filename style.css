@@ -375,3 +375,15 @@ body {
     }
 }
 
+#scrollToggle {
+    position: fixed;
+    right: 20px;
+    bottom: 30px;
+    padding: 10px;
+    font-size: 2em;
+    border: none;
+    border-radius: 50%;
+    background: #ff9800;
+    color: white;
+    cursor: pointer;
+}
