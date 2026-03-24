@@ -1,26 +1,36 @@
 # 🎬 Movie Ranking Website
 
 ## 📌 Project Overview
-The **Movie Ranking Website** is a responsive web application that allows users to explore, search, and rate movies. It fetches real-time movie data from an external API and provides an interactive user interface for a smooth user experience.
 
-This project focuses on frontend development, API integration, and dynamic UI handling using JavaScript.
+The **Movie Ranking Website** is a responsive web application that allows users to explore, search, and rate movies. It fetches real-time movie data using the **TMDB API** and provides an interactive and user-friendly interface.
+
+This project demonstrates strong frontend development skills, API integration, and dynamic UI handling using JavaScript.
 
 ---
 
 ## 🚀 Live Demo
-🔗 https://ctt-vaishnavi.github.io/Movie-ranking-website/
+
+🔗 **Visit Website:**
+[https://ctt-vaishnavi.github.io/Movie-ranking-website/](https://ctt-vaishnavi.github.io/Movie-ranking-website/)
+
+---
+
+## 📂 GitHub Repository
+
+🔗 [https://github.com/CTT-Vaishnavi/Movie-ranking-website](https://github.com/CTT-Vaishnavi/Movie-ranking-website)
 
 ---
 
 ## ✨ Features
-- 🔍 Real-time movie search functionality  
-- 🎯 Filter movies by genre and release year  
-- 📊 Sort movies by popularity, rating, and latest release  
-- ⭐ Star-based user rating system  
-- 📈 Average rating display using LocalStorage  
-- ▶️ Watch trailers using YouTube popup modal  
-- 📱 Fully responsive (Mobile, Tablet, Desktop)  
-- 🎨 Clean UI with animations and hover effects  
+
+* 🔍 Real-time movie search
+* 🎯 Filter movies by genre and release year
+* 📊 Sort movies by popularity, rating, and latest releases
+* ⭐ Star-based rating system
+* 📈 Average rating stored using LocalStorage
+* ▶️ Watch trailers via YouTube popup modal
+* 📱 Fully responsive design (Mobile, Tablet, Desktop)
+* 🎨 Smooth UI with animations and hover effects
 
 ---
 ## 📸 Screenshots  
@@ -37,28 +47,59 @@ This project focuses on frontend development, API integration, and dynamic UI ha
 ### 🎬 Trailer Popup  
 ![Trailer](picture.png)
 ## 🛠️ Tech Stack
-- **HTML5** – Structure of the website  
-- **CSS3** – Styling and responsive design  
-- **JavaScript (Vanilla JS)** – Logic and interactivity  
-- **TMDB API** – Fetching movie data and trailers  
-- **LocalStorage** – Saving user ratings  
+
+* **HTML5** – Structure
+* **CSS3** – Styling & responsiveness
+* **JavaScript (Vanilla JS)** – Logic & interactivity
+* **TMDB API** – Movie data & trailers
+* **LocalStorage** – Store user ratings
 
 ---
 
-## 📂 Project Structure
-Movie-ranking-website/ │── index.html │── style.css │── script.js │── assets/ │── README.md
+## 📁 Project Structure
+
+```
+Movie-ranking-website/
+│── index.html
+│── style.css
+│── script.js
+│── assets/
+│── README.md
+```
+
+---
+
+## ⚙️ How to Run Locally
+
+1. Clone the repository:
+
+```
+git clone https://github.com/CTT-Vaishnavi/Movie-ranking-website.git
+```
+
+2. Navigate to project folder:
+
+```
+cd Movie-ranking-website
+```
+
+3. Open `index.html` in your browser
+
+---
+
 ## 🔮 Future Improvements
-- Add user authentication  
-- Add watchlist feature  
-- Improve UI with frameworks like React  
-- Backend integration for real-time data storage  
+
+* 🔐 Add user authentication (Login/Signup)
+* 📌 Watchlist / Favorites feature
+* ⚛️ Convert to React for better scalability
+* 🗄️ Backend integration (Node.js + MongoDB)
+* 🌐 Deploy full-stack version
 
 ---
 
-## 👨‍💻 Author
-**Vaishnavi Shinde**  
+## 👩‍💻 Author
 
----
+**Vaishnavi Shinde**
 
-## ⭐ Support
-If you like this project, give it a ⭐ on GitHub!
+
+If you want, I can also make a **professional GitHub banner + screenshots section** to make your repo stand out more.
